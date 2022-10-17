@@ -1,14 +1,15 @@
 package com.epam.mjc.io;
 
-import java.io.*;
-import java.util.Arrays;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 
 public class FileReader {
 
-    public Profile getDataFromFile(File file) throws FileNotFoundException {
+    public Profile getDataFromFile(File file) {
         Map<String, String> map = new HashMap<>();
 
         try (BufferedReader inputFile = new BufferedReader(new java.io.FileReader(file));) {
